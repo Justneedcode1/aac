@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.burger-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0em, 0em);
+  transition: ease-out 0.5s;
+  -webkit-transform-origin: bottom;
+}
+
+.clicked:nth-child(2) {
+  scale: 0;
+  transition: ease-out 0.5s;
+}
+
+.clicked:nth-child(3) {
+  transform: rotate(-45deg) translateX(0);
+  -webkit-transform-origin: bottom;
+  transition: ease-out 0.5s;
+}
+
+.font-hover:hover {
+  font-weight: 300;
+}
+
+.unclicked {
+  transform: rotate(0) translate(0);
+  transition: ease-out 0.5s;
+}
+
+.black-and-white {
+  filter: brightness(70%) contrast(150%) saturate(0%) brightness(150%);
+}
+
+.sepia {
+  filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);
+}
+
+.warm {
+  filter: sepia(50%) contrast(150%) saturate(200%) brightness(100%)
+    hue-rotate(-15deg);
+}
+
+.cold {
+  filter: hue-rotate(180deg) sepia(75%) contrast(150%) saturate(300%)
+    hue-rotate(180deg);
+}
+
+.tint-green {
+  filter: hue-rotate(-30deg) sepia(75%) contrast(150%) saturate(300%)
+    hue-rotate(30deg);
+}
+
+.tint-magenta {
+  filter: hue-rotate(-270deg) sepia(55%) contrast(150%) saturate(300%)
+    hue-rotate(270deg);
+}
